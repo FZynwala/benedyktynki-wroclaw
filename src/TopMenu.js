@@ -1,0 +1,37 @@
+import { Button } from 'react-scroll';
+import './index.css';
+
+export default function TopMenu({ data }) {
+    console.log('Card:', data);
+
+    return (
+        <>
+            <div className="absolute top-0 w-full h-auto flex justify-center opacity-198 text-white">
+                <Button
+                    smooth
+                    duration={700}
+                    to="aktualnosci"
+                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                >
+                    Aktualności
+                </Button>
+                <Button
+                    smooth
+                    duration={700}
+                    to="onas"
+                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                >
+                    O nas
+                </Button>
+                <Button
+                    smooth
+                    duration={700}
+                    to="kontakt"
+                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                >
+                    Kontakt
+                </Button>
+            </div>
+        </>
+    );
+}
