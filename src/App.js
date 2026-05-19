@@ -1,4 +1,4 @@
-import Card from './Card';
+import CardsList from './CardsList';
 import './index.css';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
@@ -7,6 +7,19 @@ function App() {
     const { loading, error, data } = useFetch('http://localhost:1337/api/aktualnoscis?populate=*');
 
     console.log(data);
+
+    const sampleData = [
+        {
+            title: 'Majówki',
+            content:
+                'Lorem ipsum dolor sit habet.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose inject',
+        },
+        {
+            title: 'Życzenia wielkanocne',
+            content:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        },
+    ];
     return (
         <>
             <div className="bg-neutral-300">
@@ -21,20 +34,7 @@ function App() {
                 </div>
                 <div className="flex flex-col items-center space-around">
                     <div className="text-5xl font-bold mt-7 mb-10">Aktualności</div>
-                    <Card
-                        data={{
-                            title: 'Majówki',
-                            content:
-                                'Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet.',
-                        }}
-                    />
-                    <Card
-                        data={{
-                            title: 'Życzenia Wielkanocne',
-                            content:
-                                'Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet. Lorem ipsum dolor sit habet.',
-                        }}
-                    />
+                    <CardsList data={sampleData} />
                 </div>
             </div>
         </>
