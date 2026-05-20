@@ -1,5 +1,9 @@
+import AboutUsSection from './AboutUsSection';
 import CardsList from './CardsList';
+import ContactSection from './ContactSection';
 import './index.css';
+import Line from './Line';
+import { aboutUsData, contactData } from './sampleData';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
 
@@ -33,8 +37,15 @@ function App() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center space-around">
-                    <div className="text-5xl font-bold mt-7 mb-10">Aktualności</div>
+                    <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
+                    <Line color={'border-orange-900'} />
                     <CardsList data={sampleData} />
+                </div>
+                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                    <AboutUsSection data={aboutUsData} />
+                </div>
+                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                    <ContactSection data={contactData} />
                 </div>
             </div>
         </>
