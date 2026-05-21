@@ -36,15 +36,15 @@ function App() {
                         </div>
                     </div>
                 </div>
+                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                    <AboutUsSection data={aboutUsData} />
+                </div>
                 <div className="flex flex-col items-center space-around">
                     <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
                     <Line color={'border-orange-900'} />
                     <CardsList data={sampleData} />
                 </div>
-                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
-                    <AboutUsSection data={aboutUsData} />
-                </div>
-                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <ContactSection data={contactData} />
                 </div>
             </div>

@@ -8,7 +8,13 @@ const contactData = {
     title: 'Kontakt',
     phoneNumber: '660357514',
     email: 'sakramentki@wroclaw.opoka.org.pl',
-    accountNumber: '9612401994111001001629133',
+    accountNumber: '96 1240 1994 1111 0010 0162 9133',
+    address: {
+        name: 'Klasztor Mniszek Benedyktynek od Nieustającej Adoracji Najświętszego Sakramentu',
+        street: 'ul. Przedwiośnie 76/78',
+        zipCode: '51-211',
+        city: 'Wrocław',
+    },
 };
 
 export { aboutUsData, contactData };
