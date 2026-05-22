@@ -11,7 +11,7 @@ export default function ContactSection({ data }) {
 
     return (
         <>
-            <div className="flex flex-row items-center justify-center space-around mb-7 w-full">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-around mt-5 mb-7 w-full">
                 {/* <div className="text-5xl font-bold mt-7 mb-5">{title}</div> */}
                 {/* <Line color={'border-neutral-300'} /> */}
                 <div className="flex flex-row items-center justify-between">

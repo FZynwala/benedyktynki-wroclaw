@@ -1,4 +1,6 @@
+import { Element } from 'react-scroll';
 import AboutUsSection from './AboutUsSection';
+import BackToTopButton from './BackToTopButton';
 import CardsList from './CardsList';
 import ContactSection from './ContactSection';
 import './index.css';
@@ -23,6 +25,26 @@ function App() {
             content:
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         },
+        {
+            title: 'Życzenia wielkanocne',
+            content:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        },
+        {
+            title: 'Życzenia wielkanocne',
+            content:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        },
+        {
+            title: 'Życzenia wielkanocne',
+            content:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        },
+        {
+            title: 'Życzenia wielkanocne',
+            content:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        },
     ];
     return (
         <>
@@ -36,18 +58,25 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
-                    <AboutUsSection data={aboutUsData} />
-                </div>
-                <div className="flex flex-col items-center space-around">
-                    <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
-                    <Line color={'border-orange-900'} />
-                    <CardsList data={sampleData} />
-                </div>
+                <Element name="aboutus">
+                    <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                        <AboutUsSection data={aboutUsData} />
+                    </div>
+                </Element>
+                <Element name="news">
+                    <div className="flex flex-col items-center space-around">
+                        <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
+                        <Line color={'border-orange-900'} />
+                        <CardsList data={sampleData} />
+                    </div>
+                </Element>
                 <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
-                    <ContactSection data={contactData} />
+                    <Element name="contact">
+                        <ContactSection data={contactData} />
+                    </Element>
                 </div>
             </div>
+            <BackToTopButton />
         </>
     );
 }

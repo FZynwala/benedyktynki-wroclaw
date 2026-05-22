@@ -9,5 +9,9 @@ export default function CardsList({ data }) {
             return <Card data={item} />;
         });
 
-    return <>{renderCards()}</>;
+    return (
+        <>
+            <div className="flex flex-row flex-wrap justify-evenly">{renderCards()}</div>
+        </>
+    );
 }

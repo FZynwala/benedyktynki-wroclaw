@@ -10,24 +10,24 @@ export default function TopMenu({ data }) {
                 <Button
                     smooth
                     duration={700}
-                    to="aktualnosci"
-                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                    to="news"
+                    className="rounded-none z-50 text-xl text-white font-semibold hover:text-neutral-400 mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
                 >
                     Aktualności
                 </Button>
                 <Button
                     smooth
                     duration={700}
-                    to="onas"
-                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                    to="aboutus"
+                    className="rounded-none z-50 text-xl text-white hover:text-neutral-400 font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
                 >
                     O nas
                 </Button>
                 <Button
                     smooth
                     duration={700}
-                    to="kontakt"
-                    className="rounded-none z-50 text-xl text-white font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                    to="contact"
+                    className="rounded-none z-50 text-xl text-white hover:text-neutral-400 font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
                 >
                     Kontakt
                 </Button>
