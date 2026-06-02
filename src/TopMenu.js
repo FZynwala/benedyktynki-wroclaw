@@ -2,8 +2,6 @@ import { Button } from 'react-scroll';
 import './index.css';
 
 export default function TopMenu({ data }) {
-    console.log('Card:', data);
-
     return (
         <>
             <div className="absolute top-0 w-full h-auto flex justify-center opacity-198 text-white">

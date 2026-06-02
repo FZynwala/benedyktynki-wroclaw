@@ -7,7 +7,6 @@ import './index.css';
 export default function ContactSection({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
     const { title, phoneNumber, email, address, accountNumber } = data;
-    console.log('Card:', title);
 
     return (
         <>

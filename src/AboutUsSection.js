@@ -5,7 +5,6 @@ import Line from './Line';
 export default function AboutUsSection({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
     const { title, content } = data;
-    console.log('Card:', title);
 
     return (
         <>

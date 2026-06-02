@@ -4,7 +4,7 @@ import './index.css';
 export default function Card({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
     const { title, content } = data;
-    console.log('Card:', title);
+    // console.log('Card:', title);
 
     return (
         <>
