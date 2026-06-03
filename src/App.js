@@ -7,10 +7,10 @@ import GalleryComponent from './GalleryComponent';
 import './index.css';
 import Line from './Line';
 import { aboutUsData, contactData } from './sampleData';
-import ScrollToTopBtn from './ScrollToTopButton';
 import Spinner from './Spinner';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
+import WorshipComponent from './WorshipComponent';
 
 function App() {
     // const { loading, error, data } = useFetch('http://localhost:1337/api/aktualnoscis?populate=*');
@@ -85,9 +85,12 @@ function App() {
                         <CardsList data={sampleData} />
                     </div>
                 </Element>
-                <div className="bg-orange-900 pl-5 p-5">
-                    <Element>{isLoadingPhotos ? <Spinner /> : <GalleryComponent photoData={photoData} />}</Element>
+                <div className="bg-orange-900 pl-5 p-5 flex justify-center">
+                    <Element name="gallery">
+                        {isLoadingPhotos ? <Spinner /> : <GalleryComponent photoData={photoData} />}
+                    </Element>
                 </div>
+                <WorshipComponent />
                 <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <Element name="contact">
                         <ContactSection data={contactData} />
@@ -95,8 +98,6 @@ function App() {
                 </div>
             </div>
             {/* <ScrollToTop smooth component={ArrowUpIcon} color="#F45" /> */}
-            <ScrollToTopBtn />
-            <Spinner />
         </>
     );
 }

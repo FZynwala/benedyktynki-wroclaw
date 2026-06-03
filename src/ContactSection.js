@@ -16,7 +16,7 @@ export default function ContactSection({ data }) {
                 <div className="flex flex-row items-center justify-between">
                     <HouseIcon />
                     <div className="ml-2">
-                        <div className="w-80 mt-5">{address.name}</div>
+                        <div className="w-50 md:w-80 mt-5">{address.name}</div>
                         <div className="w-64">{address.street}</div>
                         <div className="w-64">{`${address.zipCode} ${address.city}`}</div>
                     </div>
