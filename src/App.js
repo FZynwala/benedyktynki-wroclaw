@@ -20,8 +20,15 @@ function App() {
         data: photoData,
     } = useFetch('http://localhost:1337/api/galleries?populate=*');
 
+    const {
+        loading: isLoadingKosciol,
+        error: kosciolsError,
+        data: kosciolsData,
+    } = useFetch('http://localhost:1337/api/kosciols?populate=*');
+
     console.log('loadingPhotos', isLoadingPhotos);
-    // console.log('photoData', photoData);
+    console.log('loadingKosciol', isLoadingKosciol);
+    // console.log('kosciolsData', kosciolsData);
 
     // const photos = photoData.data[0].photos.map((photo) => photo.formats.thumbnail.url);
 
@@ -90,7 +97,11 @@ function App() {
                         {isLoadingPhotos ? <Spinner /> : <GalleryComponent photoData={photoData} />}
                     </Element>
                 </div>
-                <WorshipComponent />
+                <div className="bg-neutral-300 pl-5 p-5 flex justify-center">
+                    <Element name="gallery">
+                        {isLoadingKosciol ? <Spinner /> : <WorshipComponent data={kosciolsData} />}
+                    </Element>
+                </div>
                 <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <Element name="contact">
                         <ContactSection data={contactData} />
