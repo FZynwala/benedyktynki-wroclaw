@@ -6,7 +6,7 @@ import ContactSection from './ContactSection';
 import GalleryComponent from './GalleryComponent';
 import './index.css';
 import Line from './Line';
-import { aboutUsData, contactData } from './sampleData';
+import { contactData } from './sampleData';
 import Spinner from './Spinner';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
@@ -26,9 +26,11 @@ function App() {
         data: kosciolsData,
     } = useFetch('http://localhost:1337/api/kosciols?populate=*');
 
-    console.log('loadingPhotos', isLoadingPhotos);
-    console.log('loadingKosciol', isLoadingKosciol);
-    // console.log('kosciolsData', kosciolsData);
+    const {
+        loading: isLoadingAboutUs,
+        error: aboutUsError,
+        data: aboutUsData,
+    } = useFetch('http://localhost:1337/api/about?populate=*');
 
     // const photos = photoData.data[0].photos.map((photo) => photo.formats.thumbnail.url);
 
@@ -82,7 +84,7 @@ function App() {
                 </div>
                 <Element name="aboutus">
                     <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
-                        <AboutUsSection data={aboutUsData} />
+                        {isLoadingAboutUs ? <Spinner /> : <AboutUsSection data={aboutUsData} />}
                     </div>
                 </Element>
                 <Element name="news">
@@ -98,7 +100,7 @@ function App() {
                     </Element>
                 </div>
                 <div className="bg-neutral-300 pl-5 p-5 flex justify-center">
-                    <Element name="gallery">
+                    <Element name="worship">
                         {isLoadingKosciol ? <Spinner /> : <WorshipComponent data={kosciolsData} />}
                     </Element>
                 </div>

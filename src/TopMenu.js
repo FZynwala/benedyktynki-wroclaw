@@ -32,6 +32,14 @@ export default function TopMenu({ data }) {
                 <Button
                     smooth
                     duration={700}
+                    to="worship"
+                    className="rounded-none z-50 text-xl text-white hover:text-neutral-400 font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
+                >
+                    Kościół
+                </Button>
+                <Button
+                    smooth
+                    duration={700}
                     to="contact"
                     className="rounded-none z-50 text-xl text-white hover:text-neutral-400 font-semibold mt-0 mb-3 mx-5 h-20 px-2 pt-0 text-slate-900 hidden md:inline-block w-auto"
                 >
