@@ -1,8 +1,14 @@
+import { useState } from 'react';
 import { ColumnsPhotoAlbum } from 'react-photo-album';
+import Lightbox from 'yet-another-react-lightbox';
+import { Fullscreen, Slideshow, Thumbnails, Zoom } from 'yet-another-react-lightbox/plugins';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import 'yet-another-react-lightbox/styles.css';
 import './index.css';
 import Line from './Line';
 
 export default function GalleryComponent({ photoData }) {
+    const [index, setIndex] = useState(-1);
     console.log('photoData', photoData.data[0].photos[0].url);
     const data = photoData.data[0].photos.map((photo) => {
         return {
@@ -25,6 +31,16 @@ export default function GalleryComponent({ photoData }) {
                     if (containerWidth < 800) return 3;
                     return 4;
                 }}
+                onClick={({ index }) => setIndex(index)}
+            />
+
+            <Lightbox
+                open={index >= 0}
+                close={() => setIndex(-1)}
+                slides={data}
+                index={index}
+                thumbnails={{ hidden: false, position: 'bottom', gap: 7, border: 1, vignette: false }}
+                plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
             />
         </>
     );
