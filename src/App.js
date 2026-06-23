@@ -6,7 +6,6 @@ import ContactSection from './ContactSection';
 import GalleryComponent from './GalleryComponent';
 import './index.css';
 import Line from './Line';
-import { contactData } from './sampleData';
 import Spinner from './Spinner';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
@@ -31,6 +30,12 @@ function App() {
         error: aboutUsError,
         data: aboutUsData,
     } = useFetch('http://localhost:1337/api/about?populate=*');
+
+    const {
+        loading: isLoadingContact,
+        error: contactError,
+        data: contactData,
+    } = useFetch('http://localhost:1337/api/contact?populate=*');
 
     // const photos = photoData.data[0].photos.map((photo) => photo.formats.thumbnail.url);
 
@@ -106,7 +111,7 @@ function App() {
                 </div>
                 <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <Element name="contact">
-                        <ContactSection data={contactData} />
+                        {isLoadingContact ? <Spinner /> : <ContactSection data={contactData} />}
                     </Element>
                 </div>
             </div>

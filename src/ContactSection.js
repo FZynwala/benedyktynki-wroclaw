@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import HouseIcon from './icons/HouseIcon';
 import MailIcon from './icons/MailIcon';
 import PhoneIcon from './icons/PhoneIcon';
 import './index.css';
 
 export default function ContactSection({ data }) {
-    const [isShowMore, setIsShowMore] = useState(false);
-    const { title, phoneNumber, email, address, accountNumber } = data;
+    const { phoneNumber, email, street, name, city, accountNumber, zipCode } = data.data;
 
     return (
         <>
@@ -16,9 +14,9 @@ export default function ContactSection({ data }) {
                 <div className="flex flex-row items-center justify-between">
                     <HouseIcon />
                     <div className="ml-2">
-                        <div className="w-50 md:w-80 mt-5">{address.name}</div>
-                        <div className="w-64">{address.street}</div>
-                        <div className="w-64">{`${address.zipCode} ${address.city}`}</div>
+                        <div className="w-50 md:w-80 mt-5">{name}</div>
+                        <div className="w-64">{street}</div>
+                        <div className="w-64">{`${zipCode} ${city}`}</div>
                     </div>
                 </div>
                 <div>
