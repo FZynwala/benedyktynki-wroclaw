@@ -37,6 +37,12 @@ function App() {
         data: contactData,
     } = useFetch('http://localhost:1337/api/contact?populate=*');
 
+    const {
+        loading: isLoadingAktualnosci,
+        error: aktualnosciError,
+        data: aktualnosciData,
+    } = useFetch('http://localhost:1337/api/aktualnoscis?populate=*');
+
     // const photos = photoData.data[0].photos.map((photo) => photo.formats.thumbnail.url);
 
     const sampleData = [
@@ -96,7 +102,7 @@ function App() {
                     <div className="flex flex-col items-center space-around">
                         <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
                         <Line color={'border-orange-900'} />
-                        <CardsList data={sampleData} />
+                        {isLoadingAktualnosci ? <Spinner /> : <CardsList data={aktualnosciData} />}
                     </div>
                 </Element>
                 <div className="bg-orange-900 pl-5 p-5 flex justify-center">
