@@ -7,7 +7,7 @@ export default function AboutUsSection({ data }) {
 
     return (
         <>
-            <div className="w-1/2 flex flex-col items-center space-around mb-5 text-center">
+            <div className="w-3/4 lg:w-1/2  flex flex-col items-center space-around mb-5 text-center">
                 {/* <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300"> */}
                 <div className="text-5xl font-bold mt-7 mb-5">Poznaj nas</div>
                 <Line color={'border-neutral-300'} />
