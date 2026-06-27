@@ -14,7 +14,7 @@ export default function WorshipComponent({ data }) {
             <div className="flex flex-col mb-10">
                 <div className="text-5xl font-bold mt-7 mb-5 text-center">Kościół</div>
                 <Line color={'border-orange-900'} width="48" />
-                <div className="prose mt-5">
+                <div className="prose leading-6 mt-5">
                     <BlocksRenderer content={data.data[0].content} />
                 </div>
             </div>
