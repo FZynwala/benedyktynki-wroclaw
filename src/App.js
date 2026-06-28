@@ -54,34 +54,34 @@ function App() {
                 <div className="w-full h-screen bg-[url('../public/top_image_v.jpg')] bg-cover bg-center"></div>
                 <div className="bg-black w-full h-screen z-40 top-0 absolute opacity-75 text-white text-center align-text-bottom text-7xl">
                     <div className="flex justify-center">
-                        <div className="absolute bottom-5 font-semibold text-3xl md:text-5xl lg:text-7xl">
+                        <div className="absolute md:bottom-5 lg:bottom-5 font-semibold text-3xl md:text-5xl lg:text-7xl">
                             Benedyktynki Sakramentki Wrocław
                         </div>
                     </div>
                 </div>
                 <Element name="aboutus">
-                    <div className="flex flex-col items-center space-around bg-orange-900 text-neutral-300">
+                    <div className="min-h-48 flex flex-col items-center space-around bg-orange-900 text-neutral-300">
                         {isLoadingAboutUs ? <Spinner /> : <AboutUsSection data={aboutUsData} />}
                     </div>
                 </Element>
                 <Element name="news">
-                    <div className="flex flex-col items-center space-around">
+                    <div className="min-h-48 flex flex-col items-center space-around">
                         <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
                         <Line color={'border-orange-900'} />
                         {isLoadingAktualnosci ? <Spinner /> : <CardsList data={aktualnosciData} />}
                     </div>
                 </Element>
-                <div className="bg-orange-900 pl-5 p-5 flex justify-center">
+                <div className="min-h-48 bg-orange-900 pl-5 p-5 flex justify-center">
                     <Element name="gallery">
                         {isLoadingPhotos ? <Spinner /> : <GalleryComponent photoData={photoData} />}
                     </Element>
                 </div>
-                <div className="bg-neutral-300 pl-5 p-5 flex justify-center">
+                <div className="min-h-48 bg-neutral-300 pl-5 p-5 flex justify-center">
                     <Element name="worship">
                         {isLoadingKosciol ? <Spinner /> : <WorshipComponent data={kosciolsData} />}
                     </Element>
                 </div>
-                <div className="flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
+                <div className="min-h-32 flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <Element name="contact">
                         {isLoadingContact ? <Spinner /> : <ContactSection data={contactData} />}
                     </Element>

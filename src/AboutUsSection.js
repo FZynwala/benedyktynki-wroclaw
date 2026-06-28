@@ -21,7 +21,7 @@ export default function AboutUsSection({ data }) {
                 >
                     <BlocksRenderer content={data.data.content} />
                 </div>
-                <button onClick={() => setIsShowMore(!isShowMore)}>
+                <button className="mt-3" onClick={() => setIsShowMore(!isShowMore)}>
                     {isShowMore ? 'Pokaż mniej' : 'Pokaż więcej'}
                 </button>
                 {/* </div> */}
