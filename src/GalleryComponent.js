@@ -9,13 +9,12 @@ import Line from './Line';
 
 export default function GalleryComponent({ photoData }) {
     const [index, setIndex] = useState(-1);
-    // console.log('photoData', photoData.data[0].photos[0].url);
+
     const data = photoData.data[0].photos.map((photo) => {
         return {
-            src: `http://localhost:1337${photo.url}`,
+            src: `${photo.url}`,
         };
     });
-    // console.log('photosp', data);
 
     return (
         <>

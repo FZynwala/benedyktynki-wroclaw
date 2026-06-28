@@ -5,6 +5,7 @@ import Line from './Line';
 
 export default function AboutUsSection({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
+    console.log('ABOUTUS', data);
 
     return (
         <>

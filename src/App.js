@@ -13,36 +13,39 @@ import TopMenu from './TopMenu';
 import useFetch from './useFetch';
 import WorshipComponent from './WorshipComponent';
 
+export const prodUrl = 'https://competent-spirit-9c6c7cad85.strapiapp.com';
+
 function App() {
+    const devUrl = 'http://localhost:1337';
     const {
         loading: isLoadingPhotos,
         error: photosError,
         data: photoData,
-    } = useFetch('http://localhost:1337/api/galleries?populate=*');
+    } = useFetch(`${prodUrl}/api/galleries?populate=*`);
 
     const {
         loading: isLoadingKosciol,
         error: kosciolsError,
         data: kosciolsData,
-    } = useFetch('http://localhost:1337/api/kosciols?populate=*');
+    } = useFetch(`${prodUrl}/api/kosciols?populate=*`);
 
     const {
         loading: isLoadingAboutUs,
         error: aboutUsError,
         data: aboutUsData,
-    } = useFetch('http://localhost:1337/api/about?populate=*');
+    } = useFetch(`${prodUrl}/api/about?populate=*`);
 
     const {
         loading: isLoadingContact,
         error: contactError,
         data: contactData,
-    } = useFetch('http://localhost:1337/api/contact?populate=*');
+    } = useFetch(`${prodUrl}/api/contact?populate=*`);
 
     const {
         loading: isLoadingAktualnosci,
         error: aktualnosciError,
         data: aktualnosciData,
-    } = useFetch('http://localhost:1337/api/aktualnoscis?populate=*');
+    } = useFetch(`${prodUrl}/api/aktualnoscis?populate=*`);
 
     return (
         <>
