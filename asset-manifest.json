@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/benedyktynki-wroclaw/static/css/main.d1a74d1d.css",
-    "main.js": "/benedyktynki-wroclaw/static/js/main.7e2911e0.js",
+    "main.css": "/benedyktynki-wroclaw/static/css/main.75298759.css",
+    "main.js": "/benedyktynki-wroclaw/static/js/main.76c77f0b.js",
     "static/js/453.cb24a76c.chunk.js": "/benedyktynki-wroclaw/static/js/453.cb24a76c.chunk.js",
     "static/media/top_image_v.jpg": "/benedyktynki-wroclaw/static/media/top_image_v.4a313bf12017a5c67c47.jpg",
     "index.html": "/benedyktynki-wroclaw/index.html",
-    "main.d1a74d1d.css.map": "/benedyktynki-wroclaw/static/css/main.d1a74d1d.css.map",
-    "main.7e2911e0.js.map": "/benedyktynki-wroclaw/static/js/main.7e2911e0.js.map",
+    "main.75298759.css.map": "/benedyktynki-wroclaw/static/css/main.75298759.css.map",
+    "main.76c77f0b.js.map": "/benedyktynki-wroclaw/static/js/main.76c77f0b.js.map",
     "453.cb24a76c.chunk.js.map": "/benedyktynki-wroclaw/static/js/453.cb24a76c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1a74d1d.css",
-    "static/js/main.7e2911e0.js"
+    "static/css/main.75298759.css",
+    "static/js/main.76c77f0b.js"
   ]
 }
