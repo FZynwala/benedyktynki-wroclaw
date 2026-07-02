@@ -4,6 +4,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import AboutUsSection from './AboutUsSection';
 import CardsList from './CardsList';
 import ContactSection from './ContactSection';
+import ErrorMessage from './ErrorMessage';
 import GalleryComponent from './GalleryComponent';
 import ArrowUpIcon from './icons/ArrowUpIcon';
 import './index.css';
@@ -61,29 +62,59 @@ function App() {
                 </div>
                 <Element name="aboutus">
                     <div className="min-h-48 flex flex-col items-center space-around bg-orange-900 text-neutral-300">
-                        {isLoadingAboutUs ? <Spinner /> : <AboutUsSection data={aboutUsData} />}
+                        {isLoadingAboutUs ? (
+                            <Spinner />
+                        ) : aboutUsError ? (
+                            <ErrorMessage />
+                        ) : (
+                            <AboutUsSection data={aboutUsData} />
+                        )}
                     </div>
                 </Element>
                 <Element name="news">
                     <div className="min-h-48 flex flex-col items-center space-around">
                         <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
                         <Line color={'border-orange-900'} />
-                        {isLoadingAktualnosci ? <Spinner /> : <CardsList data={aktualnosciData} />}
+                        {isLoadingAktualnosci ? (
+                            <Spinner />
+                        ) : aktualnosciError ? (
+                            <ErrorMessage />
+                        ) : (
+                            <CardsList data={aktualnosciData} />
+                        )}
                     </div>
                 </Element>
                 <div className="min-h-48 bg-orange-900 pl-5 p-5 flex justify-center">
                     <Element name="gallery">
-                        {isLoadingPhotos ? <Spinner /> : <GalleryComponent photoData={photoData} />}
+                        {isLoadingPhotos ? (
+                            <Spinner />
+                        ) : photosError ? (
+                            <ErrorMessage />
+                        ) : (
+                            <GalleryComponent photoData={photoData} />
+                        )}
                     </Element>
                 </div>
                 <div className="min-h-48 bg-neutral-300 pl-5 p-5 flex justify-center">
                     <Element name="worship">
-                        {isLoadingKosciol ? <Spinner /> : <WorshipComponent data={kosciolsData} />}
+                        {isLoadingKosciol ? (
+                            <Spinner />
+                        ) : kosciolsError ? (
+                            <ErrorMessage />
+                        ) : (
+                            <WorshipComponent data={kosciolsData} />
+                        )}
                     </Element>
                 </div>
                 <div className="min-h-32 flex flex-col space-around bg-orange-900 text-neutral-300 justify-center">
                     <Element name="contact">
-                        {isLoadingContact ? <Spinner /> : <ContactSection data={contactData} />}
+                        {isLoadingContact ? (
+                            <Spinner />
+                        ) : contactError ? (
+                            <ErrorMessage />
+                        ) : (
+                            <ContactSection data={contactData} />
+                        )}
                     </Element>
                 </div>
             </div>
