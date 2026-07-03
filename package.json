@@ -2,7 +2,7 @@
     "name": "benedyktynki-sakramentki",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://fzynwala.github.io",
+    "homepage": "https://benedyktynkiwroclaw.pl",
     "dependencies": {
         "@strapi/blocks-react-renderer": "^1.0.2",
         "@tailwindcss/vite": "^4.3.0",
