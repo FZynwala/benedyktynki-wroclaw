@@ -5,8 +5,6 @@ import './index.css';
 export default function Card({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
 
-    console.log('Card:', data);
-
     return (
         <>
             <div className="w-80 my-4 p-4">

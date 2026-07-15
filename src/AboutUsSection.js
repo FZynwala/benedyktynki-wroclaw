@@ -5,7 +5,6 @@ import Line from './Line';
 
 export default function AboutUsSection({ data }) {
     const [isShowMore, setIsShowMore] = useState(false);
-    console.log('ABOUTUS', data);
 
     return (
         <>
@@ -21,7 +20,7 @@ export default function AboutUsSection({ data }) {
                 >
                     <BlocksRenderer content={data.data.content} />
                 </div>
-                <button className="mt-3" onClick={() => setIsShowMore(!isShowMore)}>
+                <button className="underline mt-3" onClick={() => setIsShowMore(!isShowMore)}>
                     {isShowMore ? 'Pokaż mniej' : 'Pokaż więcej'}
                 </button>
                 {/* </div> */}

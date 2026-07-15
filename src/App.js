@@ -1,12 +1,10 @@
 import 'react-photo-album/columns.css';
 import { Element } from 'react-scroll';
-import ScrollToTop from 'react-scroll-to-top';
 import AboutUsSection from './AboutUsSection';
 import CardsList from './CardsList';
 import ContactSection from './ContactSection';
 import ErrorMessage from './ErrorMessage';
 import GalleryComponent from './GalleryComponent';
-import ArrowUpIcon from './icons/ArrowUpIcon';
 import './index.css';
 import Line from './Line';
 import Spinner from './Spinner';
@@ -51,11 +49,13 @@ function App() {
     return (
         <>
             <div className="bg-neutral-300">
-                <TopMenu data={{ id: '1' }} />
+                <Element name="menu">
+                    <TopMenu data={{ id: '1' }} />
+                </Element>
                 <div className="w-full h-screen bg-[url('../public/top_image_v.jpg')] bg-cover bg-center"></div>
                 <div className="bg-black w-full h-screen z-40 top-0 absolute opacity-75 text-white text-center align-text-bottom text-7xl">
                     <div className="flex justify-center">
-                        <div className="absolute md:bottom-5 lg:bottom-5 font-semibold text-3xl md:text-5xl lg:text-7xl">
+                        <div className="absolute md:bottom-5 lg:bottom-5 font-semibold text-3xl md:text-5xl lg:text-7xl mt-5">
                             Benedyktynki Sakramentki Wrocław
                         </div>
                     </div>
@@ -84,7 +84,7 @@ function App() {
                         )}
                     </div>
                 </Element>
-                <div className="min-h-48 bg-orange-900 pl-5 p-5 flex justify-center">
+                <div className="min-h-48 w-100 bg-orange-900 pl-5 p-5 flex flex-col items-center justify-center">
                     <Element name="gallery">
                         {isLoadingPhotos ? (
                             <Spinner />
@@ -118,7 +118,12 @@ function App() {
                     </Element>
                 </div>
             </div>
-            <ScrollToTop smooth component={ArrowUpIcon} color="#F453" />
+            {/* <ScrollToTop
+                smooth
+                component={<ArrowUpIcon />}
+                className="flex justify-center items-center !rounded-full !bg-amber-500 !right-5"
+                width="48"
+            /> */}
         </>
     );
 }

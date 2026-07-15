@@ -25,7 +25,6 @@ export default function GalleryComponent({ photoData }) {
             <ColumnsPhotoAlbum
                 photos={data}
                 columns={(containerWidth) => {
-                    console.log('containerWidth', containerWidth);
                     if (containerWidth < 400) return 2;
                     if (containerWidth < 800) return 3;
                     return 4;
