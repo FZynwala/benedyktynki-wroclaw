@@ -5,7 +5,6 @@ import { Fullscreen, Slideshow, Thumbnails, Zoom } from 'yet-another-react-light
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import 'yet-another-react-lightbox/styles.css';
 import './index.css';
-import Line from './Line';
 
 export default function GalleryComponent({ photoData }) {
     const [index, setIndex] = useState(-1);
@@ -20,7 +19,7 @@ export default function GalleryComponent({ photoData }) {
         <>
             <div className="flex flex-col items-center mb-10">
                 <div className="text-5xl font-bold mt-7 mb-5 text-neutral-300">Galeria</div>
-                <Line color={'border-neutral-300'} />
+                <span className={`block h-[6px] origin-left w-[140px] bg-slate-300`} />
             </div>
             <ColumnsPhotoAlbum
                 photos={data}

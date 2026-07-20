@@ -5,17 +5,17 @@ import CardsList from './CardsList';
 import ContactSection from './ContactSection';
 import ErrorMessage from './ErrorMessage';
 import GalleryComponent from './GalleryComponent';
+import HamburgerMenu from './HamburgerMenu';
 import './index.css';
-import Line from './Line';
 import Spinner from './Spinner';
 import TopMenu from './TopMenu';
 import useFetch from './useFetch';
 import WorshipComponent from './WorshipComponent';
 
 export const prodUrl = 'https://competent-spirit-9c6c7cad85.strapiapp.com';
+const devUrl = 'http://localhost:1337';
 
 function App() {
-    const devUrl = 'http://localhost:1337';
     const {
         loading: isLoadingPhotos,
         error: photosError,
@@ -52,10 +52,11 @@ function App() {
                 <Element name="menu">
                     <TopMenu data={{ id: '1' }} />
                 </Element>
+                <HamburgerMenu />
                 <div className="w-full h-screen bg-[url('../public/top_image_v.jpg')] bg-cover bg-center"></div>
                 <div className="bg-black w-full h-screen z-40 top-0 absolute opacity-75 text-white text-center align-text-bottom text-7xl">
                     <div className="flex justify-center">
-                        <div className="absolute md:bottom-5 lg:bottom-5 font-semibold text-3xl md:text-5xl lg:text-7xl mt-5">
+                        <div className="absolute bottom-10 font-semibold text-3xl md:text-5xl lg:text-7xl">
                             Benedyktynki Sakramentki Wrocław
                         </div>
                     </div>
@@ -74,7 +75,7 @@ function App() {
                 <Element name="news">
                     <div className="min-h-48 flex flex-col items-center space-around">
                         <div className="text-5xl font-bold mt-7 mb-5">Aktualności</div>
-                        <Line color={'border-orange-900'} />
+                        <span className={`block h-[6px] origin-left w-[140px] bg-orange-900`} />
                         {isLoadingAktualnosci ? (
                             <Spinner />
                         ) : aktualnosciError ? (
