@@ -20,31 +20,31 @@ function App() {
         loading: isLoadingPhotos,
         error: photosError,
         data: photoData,
-    } = useFetch(`${devUrl}/api/galleries?populate=*`);
+    } = useFetch(`${prodUrl}/api/galleries?populate=*`);
 
     const {
         loading: isLoadingKosciol,
         error: kosciolsError,
         data: kosciolsData,
-    } = useFetch(`${devUrl}/api/kosciols?populate=*`);
+    } = useFetch(`${prodUrl}/api/kosciols?populate=*`);
 
     const {
         loading: isLoadingAboutUs,
         error: aboutUsError,
         data: aboutUsData,
-    } = useFetch(`${devUrl}/api/about?populate=*`);
+    } = useFetch(`${prodUrl}/api/about?populate=*`);
 
     const {
         loading: isLoadingContact,
         error: contactError,
         data: contactData,
-    } = useFetch(`${devUrl}/api/contact?populate=*`);
+    } = useFetch(`${prodUrl}/api/contact?populate=*`);
 
     const {
         loading: isLoadingAktualnosci,
         error: aktualnosciError,
         data: aktualnosciData,
-    } = useFetch(`${devUrl}/api/aktualnoscis?populate=*`);
+    } = useFetch(`${prodUrl}/api/aktualnoscis?populate=*`);
 
     return (
         <>
