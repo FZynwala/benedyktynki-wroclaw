@@ -20,31 +20,31 @@ function App() {
         loading: isLoadingPhotos,
         error: photosError,
         data: photoData,
-    } = useFetch(`${devUrl}/api/galleries?populate=*`);
+    } = useFetch(`${prodUrl}/api/galleries?populate=*`);
 
     const {
         loading: isLoadingKosciol,
         error: kosciolsError,
         data: kosciolsData,
-    } = useFetch(`${devUrl}/api/kosciols?populate=*`);
+    } = useFetch(`${prodUrl}/api/kosciols?populate=*`);
 
     const {
         loading: isLoadingAboutUs,
         error: aboutUsError,
         data: aboutUsData,
-    } = useFetch(`${devUrl}/api/about?populate=*`);
+    } = useFetch(`${prodUrl}/api/about?populate=*`);
 
     const {
         loading: isLoadingContact,
         error: contactError,
         data: contactData,
-    } = useFetch(`${devUrl}/api/contact?populate=*`);
+    } = useFetch(`${prodUrl}/api/contact?populate=*`);
 
     const {
         loading: isLoadingAktualnosci,
         error: aktualnosciError,
         data: aktualnosciData,
-    } = useFetch(`${devUrl}/api/aktualnoscis?populate=*`);
+    } = useFetch(`${prodUrl}/api/aktualnoscis?populate=*`);
 
     return (
         <>
@@ -56,7 +56,7 @@ function App() {
                 <div className="w-full h-screen bg-[url('../public/top_image_v.jpg')] bg-cover bg-center"></div>
                 <div className="bg-black w-full h-screen z-40 top-0 absolute opacity-75 text-white text-center align-text-bottom text-7xl">
                     <div className="flex justify-center">
-                        <div className="absolute bottom-14 font-semibold md:mb-0 text-3xl md:text-5xl lg:text-7xl">
+                        <div className="absolute bottom-14 mb-4 font-semibold md:mb-0 text-3xl md:text-5xl lg:text-7xl">
                             Benedyktynki Sakramentki Wrocław
                         </div>
                     </div>
